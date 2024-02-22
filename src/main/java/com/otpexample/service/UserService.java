@@ -22,7 +22,13 @@ public class UserService {
     }
 
     public void verifyEmail(User user) {
-        user.setEmailVerified(String.valueOf(true));
+        user.setEmailVerified(Boolean.parseBoolean(String.valueOf(true)));
         userRepository.save(user);
+    }
+
+
+    public boolean isEmailVerified(String email) {
+        User user = userRepository.findByEmail(email);
+        return user != null && user.isEmailVerified();
     }
 }

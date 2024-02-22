@@ -25,5 +25,7 @@ public class User {
     private String email;
     private  String password;
     private String mobile;
-    private  String emailVerified;
+    private  boolean emailVerified;
+
 }
+

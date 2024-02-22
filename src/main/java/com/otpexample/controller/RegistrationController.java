@@ -35,7 +35,7 @@ public class RegistrationController {
 
         Map<String,String> response= new HashMap<>();
         response.put("status","success");
-        response.put("messege","User register successfully.Check your email for verification.");
+        response.put("message","User register successfully.Check your email for verification.");
         return response;
 
     }
